@@ -33,7 +33,7 @@ class SingletonArchivoEmpleados:
         return empleados
 
 # Decorador para medir el tiempo de ejecución
-def calcular_tiempo(func):
+def Calculartiempo(func):
     def wrapper(*args, **kwargs):
         inicio = time.time()
         resultado = func(*args, **kwargs)
@@ -117,7 +117,7 @@ class VentanaGestionSalarios(tk.Tk):
         self.cargarEmpleados()
         self.actualizarTabla()
 
-    @calcular_tiempo
+    @Calculartiempo
     def calcularSalario(self):
         seleccion = self.comboEmpleados.current()
         empleados = self.archivoEmpleados.leerEmpleados()

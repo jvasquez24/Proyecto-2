@@ -1,4 +1,5 @@
 1,Jorge,Vásquez Venegas,29,Supervisor,800000
-2,Pedro,Perez,33,Empleado,600000
+2,Pedro,Perez,30,Empleado,600000
 3,Juan,Martinez,22,Empleado,600000
 4,Elizabeth,Jimenez,25,Gerente,1000000
+5,Karen,Bermudez,25,Empleado,600000

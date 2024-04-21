@@ -71,8 +71,19 @@ class ArchivoEmpleados:
                 f.write(f"{empleado.id},{empleado.nombre},{empleado.apellido},{empleado.edad},{empleado.cargo},{empleado.salario}\n")
         messagebox.showinfo("Éxito", "Empleado actualizado correctamente")
 
+
+class MetaSingleton(type):
+    """Metaclass para implementar el patrón Singleton."""
+    _instancia = None
+
+    def __call__(cls, *args, **kwargs):
+        if cls._instancia is None:
+            cls._instancia = super().__call__(*args, **kwargs)
+        return cls._instancia
+
+
 # Clase para la ventana de gestión de empleados
-class VentanaGestionEmpleados(tk.Tk):
+class VentanaGestionEmpleados(tk.Tk, metaclass=MetaSingleton):
     def __init__(self):
         super().__init__()
         self.title("Gestión de Empleados")
